@@ -193,10 +193,10 @@ let blacjack={
 
 const YOU=blacjack['you'];
 const DEALER=blacjack['dealer'];
-const hitSound=new Audio('static/sounds/Swish.mp3');
-const winSound = new Audio('static/sounds/applause4.mp3');
-const lossSound = new Audio('static/sounds/aww.mp3');
-const drewSound = new Audio('static/sounds/cash.mp3');
+const hitSound=new Audio('sounds/Swish.mp3');
+const winSound = new Audio('sounds/applause4.mp3');
+const lossSound = new Audio('sounds/aww.mp3');
+const drewSound = new Audio('sounds/cash.mp3');
 document.querySelector('#blackjack-hit-button').addEventListener('click',blackjackHit);
 document.querySelector('#blackjack-deal-button').addEventListener('click',blackjackDeal);
 document.querySelector('#blackjack-Stand-button').addEventListener('click',dealerLogic);
@@ -246,7 +246,7 @@ function showCard(card,activeUser)
     if(activeUser['score']<=21)
     {
         let cardImage = document.createElement('img');
-        cardImage.src=`static/images/${card}.png`;
+        cardImage.src=`images/${card}.png`;
         document.querySelector(activeUser['div']).appendChild(cardImage);
         hitSound.play();
     }
